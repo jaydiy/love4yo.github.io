@@ -8,6 +8,11 @@ const routes = [
     component: Home
   },
   {
+    path: '/404',
+    name: '404',
+    redirect: '/'
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting
@@ -19,6 +24,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHashHistory(),
+  // history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
